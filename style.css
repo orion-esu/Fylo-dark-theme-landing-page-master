@@ -43,13 +43,15 @@ body {
 img {
     max-width: 100%;
 }
-
-.container {
-    width: 85%;
-    max-width: 1128px;
-    margin: auto;
+P{
+    color:rgba(255, 255, 255, 0.9);
 }
-
+.container {
+    width: 90%;
+    max-width: 1350px;
+    margin: auto;
+    outline:1px solid green;
+}
 h2,
 h3,
 h5,
@@ -108,9 +110,8 @@ nav img {
     padding-bottom: 1em;
     color: rgba(255, 255, 255, 0.9);
 }
-
 .intro__text--button {
-    padding: 1.2rem 7rem;
+    padding: 1rem 4.3rem;
     font-size: 16px;
     color: var(--white);
     background-color: var(--blue);
@@ -119,7 +120,6 @@ nav img {
     border-radius: 50px;
     font-weight: 500;
 }
-
 @-webkit-keyframes hvr-wobble-vertical {
     16.65% {
         -webkit-transform: translateY(8px);
@@ -194,7 +194,33 @@ nav img {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
-
+@media (min-width:500px){
+    .intro__text--title{
+        font-size: calc(1.8rem + .2rem);
+    }
+    .intro__text > p{
+        font-size:calc(1.2rem + .1rem)
+    }
+    .container-2--text__title{
+        font-size:2rem;
+    }
+}
+@media (min-width:700px){
+    .intro__text{
+        max-width:85%;
+        margin:auto;
+        width:700px;
+    }
+    .intro__text--title{
+        font-size: calc(1.8rem + .5rem);
+    }
+    .intro__text > p{
+        font-size:calc(1.2rem + .2rem)
+    }
+    .intro__text--button {
+        padding:1.2rem calc(4.3rem + 3rem);
+    }
+}
 main {
     padding-top: 10rem;
     background-color: var(--dark-blue--2);
@@ -205,7 +231,7 @@ main {
     font-size: 1.5rem;
 }
 
-.row+.row {
+.row +.row {
     margin-top: 6em;
 }
 
@@ -213,20 +239,43 @@ main {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
 }
-
-.container__2 {
-    padding-top: 10em;
+.row-container-2{
+    margin-top:6em;
 }
-
+@media (min-width:550px) and (max-width:700px){
+    .row > p{
+        width:43ch;
+        margin:auto;
+    }
+}
+@media (min-width:701px){
+    .row +.row {
+        margin-top: 0;
+    }
+    .row-container-1,
+    .row-container-2{
+        display:flex;
+        gap:3em;
+    }
+}
+.container__2 {
+    margin-top: 10em;
+}
 .container__2--text {
     text-align: left;
-    margin-top: 4em;
 }
-
 .container__2--text>p {
     font-size: 1rem;
 }
-
+@media (min-width:800px){
+    .container__2{
+        display:flex;
+        gap:3em;
+    }
+    .container__2--image{
+        align-self:center;
+    }
+}
 .fylo-link {
     text-align: left;
     color: var(--cyan-hsl);
@@ -343,7 +392,18 @@ div.testimonials--content:nth-child(4)>div:nth-child(2)>div:nth-child(2)>p:nth-c
     margin-top: 5px;
     margin-bottom: 0px;
 }
-
+@media (min-width:850px){
+    .testimonials{
+        display:flex;
+        gap:3em;
+    }
+    .info+.info {
+        margin-top: 0;
+    }
+    .testimonials--content>p {
+        font-size: .9rem;
+    }
+}
 .cta {
     background-color: #1c2431;
     padding: 3em 2em;
@@ -361,7 +421,13 @@ div.testimonials--content:nth-child(4)>div:nth-child(2)>div:nth-child(2)>p:nth-c
     font-size: 1rem;
     margin-bottom: 2em;
 }
-
+@media (min-width:800px){
+    .cta{
+        max-width:800px;
+        width:80%;
+        margin:0 auto;
+    }
+}
 input[type="email"] {
     width: 95%;
     border: none;
@@ -459,7 +525,6 @@ svg {
 
 .footer--icons>.fab {
     font-size: 1rem;
-    border: 1px solid white;
     padding: 10px;
     border-radius: 50px;
 }
@@ -477,3 +542,36 @@ svg {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+@media (min-width:700px){
+    .flex{
+        display:flex;
+        gap: 3em;
+    }
+    .footer-location-info{
+        width:100%;
+    }
+    .footer-contact-info{
+        width:100%;
+    }
+    .footer-location-info {
+        margin-top: 0;
+    }
+    .flex-info{
+        display:flex;
+    }
+    .footer-text-about,
+    .footer-text-about-contact,
+    .footer--icons{
+        width:100%;
+    }
+    .flex-info {
+        margin-top: 3em;
+      }
+
+/* style.css | http://127.0.0.1:5500/style.css?_cacheOverride=1596268811027 */
+
+    .footer-text-about,
+    .footer-text-about-contact,
+    .footer--icons {
+        margin: 0;
+ 
