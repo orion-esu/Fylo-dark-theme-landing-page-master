@@ -288,7 +288,6 @@ main {
 .row+.row {
     margin-top: 6em;
 }
-
 .row>p {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
@@ -300,8 +299,7 @@ main {
 
 @media (min-width:550px) and (max-width:700px) {
     .row>p {
-        width: 43ch;
-        margin: auto;
+        max-width: 40ch;
     }
 }
 
@@ -313,10 +311,14 @@ main {
     .row-container-1,
     .row-container-2 {
         display: flex;
-        gap: 3em;
+        gap: 7em;
     }
 }
-
+@media (min-width:1028px){
+    .row>p {
+        /* max-width: 48ch; */
+    }
+}
 .container__2 {
     margin-top: 10em;
 }
@@ -633,20 +635,24 @@ svg {
 
 .footer--icons {
     margin-top: 5em;
-    text-align: center;
-    margin-bottom: 3em;
+    gap:1.2em;
+    justify-content: center;
+    display:flex;
 }
 
-.footer--icons>.fab {
-    font-size: 1rem;
-    padding: 10px;
+.footer--icons .fab {
+    font-size: 1.2rem;
+    padding: .7em;
     border-radius: 50px;
+    border:1px solid white;
+    color:white;
 }
-
-.fab+.fab {
-    margin-left: 10px;
+.footer--icons .fab:hover {
+    background-color:white;
+    transition: 250ms ease-in;
+    color:var(--dark-blue--3);
+    font-weight: 900;
 }
-
 .attribution {
     font-size: 1.2rem;
     text-align: center;
@@ -661,7 +667,6 @@ svg {
 @media (min-width:700px) {
     .flex {
         display: flex;
-        /* gap: 3em; */
     }
 
     .footer-location-info {
@@ -678,35 +683,32 @@ svg {
 
     .flex-info {
         display: flex;
+        
     }
-
-    .footer-text-about,
-    .footer-text-about-contact,
     .footer--icons {
-        width: 100%;
-    }
-
-    @media (min-width:700px) and (max-width:899px) {
-        .flex {
-            gap: 3em;
-        }
-
-        .flex-info {
-            margin-top: 3em;
-        }
-
-    }
-
-    /* style.css | http://127.0.0.1:5500/style.css?_cacheOverride=1596268811027 */
-
-    .footer-text-about,
-    .footer-text-about-contact,
-    .footer--icons {
-        margin: 0;
+        align-items:center;
     }
 }
+@media (min-width:700px) and (max-width:949px) {
+    .flex {
+        gap: 3em;
+    }
 
-@media (min-width:900px) {
+    .flex-info {
+        margin-top: 3em;
+        gap: 7em;
+    }
+
+}
+
+/* style.css | http://127.0.0.1:5500/style.css?_cacheOverride=1596268811027 */
+
+.footer-text-about,
+.footer-text-about-contact,
+.footer--icons {
+    margin: 0;
+}
+@media (min-width:950px) {
     .footer--info {
         display: flex;
         width: 100%;
@@ -714,8 +716,15 @@ svg {
         justify-content: space-evenly;
         margin-top: 2em;
     }
-
-
+    .footer--icons {
+        align-items: flex-start;
+        margin-top: 1em;
+    }
+    .footer-text-about,
+    .footer-text-about-contact,
+    .footer--icons {
+        width: 100%;
+    }
     .flex,
     .flex-info {
         width: 100%;
