@@ -3,8 +3,6 @@
 *::after {
     box-sizing: border-box;
     padding: 0;
-    /* margin:0; */
-    /* outline:.1px solid red; */
 }
 
 :root {
@@ -129,7 +127,15 @@ nav img {
         gap: 3.5em;
     }
 }
-
+.wavy{
+    
+    background-color:var(--dark-blue--1);
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center bottom;
+    width:100%;
+}
 .intro__text {
     padding-top: 1.5em;
 }
@@ -146,7 +152,7 @@ nav img {
 }
 
 .intro__text--button {
-    padding: 1rem 4.3rem;
+    padding: 1.3rem 5rem;
     font-size: 16px;
     color: var(--white);
     background-color: var(--blue);
@@ -271,15 +277,19 @@ nav img {
     }
 
     .intro__text--button {
-        padding: 1.2rem calc(4.3rem + 3rem);
+        padding: 1.5rem calc(4.3rem + 4rem);
+    }
+    .wavy{
+        background-image:url(./images/bg-curvy-mobile.svg);
     }
 }
 
 main {
-    padding-top: 10rem;
     background-color: var(--dark-blue--2);
 }
-
+.container__1{
+    padding-top:6em;
+}
 .container__1--title {
     margin-top: 1.3em;
     font-size: 1.5rem;
@@ -297,12 +307,6 @@ main {
     margin-top: 6em;
 }
 
-@media (min-width:550px) and (max-width:700px) {
-    .row>p {
-        max-width: 40ch;
-    }
-}
-
 @media (min-width:701px) {
     .row+.row {
         margin-top: 0;
@@ -312,11 +316,6 @@ main {
     .row-container-2 {
         display: flex;
         gap: 7em;
-    }
-}
-@media (min-width:1028px){
-    .row>p {
-        /* max-width: 48ch; */
     }
 }
 .container__2 {
@@ -331,7 +330,7 @@ main {
     font-size: 1rem;
 }
 
-@media (min-width:800px) {
+@media (min-width:810px) {
     .container__2 {
         display: flex;
         gap: 3em;
@@ -340,8 +339,15 @@ main {
     .container__2--image {
         align-self: center;
     }
+    .container-2--text__title{
+        max-width:20ch;
+    }
 }
-
+@media (min-width:1114px){
+    .container__2--text p{
+        max-width:70ch;
+    }
+}
 .fylo-link {
     text-align: left;
     color: var(--cyan-hsl);
@@ -381,7 +387,6 @@ main {
 }
 @media (min-width:850px){
 .testimonial--quote {
-  /* left: 0.8rem; */
   left: -.3rem;
 }
 }
