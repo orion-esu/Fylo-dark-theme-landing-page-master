@@ -155,11 +155,13 @@ nav img {
     padding: 1.3rem 5rem;
     font-size: 16px;
     color: var(--white);
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
     cursor: pointer;
     border: none;
     border-radius: 50px;
     font-weight: 500;
+    background:var(--blue);
+    background:linear-gradient(to right, var(--cyan-hsl), var(--blue));
 }
 
 @-webkit-keyframes hvr-wobble-vertical {
