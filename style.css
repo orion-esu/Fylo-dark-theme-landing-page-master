@@ -163,7 +163,10 @@ nav img {
     background:var(--blue);
     background:linear-gradient(to right, var(--cyan-hsl), var(--blue));
 }
-
+.intro__text--button:hover{
+    background:var(--blue);
+    background:linear-gradient(to left, var(--cyan-hsl), var(--blue));
+}
 @-webkit-keyframes hvr-wobble-vertical {
     16.65% {
         -webkit-transform: translateY(8px);
