@@ -162,6 +162,7 @@ nav img {
     font-weight: 500;
     background:var(--blue);
     background:linear-gradient(to right, var(--cyan-hsl), var(--blue));
+    transition:ease-in;
 }
 .intro__text--button:hover{
     background:var(--blue);
@@ -512,7 +513,7 @@ div.testimonials--content:nth-child(4)>div:nth-child(2)>div:nth-child(2)>p:nth-c
 
 @media (min-width:800px) {
     .cta {
-        max-width: 700px;
+        max-width: 800px;
         width: 80%;
         margin: 0 auto;
     }
@@ -534,7 +535,7 @@ input[type="email"] {
 ::placeholder {
     font-family: var(--open-sans);
     font-size: 1.2rem;
-    font-weight: var(--bolder);
+    font-weight: var(--light);
 }
 
 .cta--form--button {
@@ -545,8 +546,13 @@ input[type="email"] {
     border-radius: 50px;
     font-size: 1rem;
     color: var(--white);
-    font-weight: 700;
+    font-weight: var(--light);
     cursor: pointer;
+    background:linear-gradient(to right, var(--cyan-hsl), var(--blue));
+}
+.cta--form--button:focus{
+    background:var(--blue);
+    background:linear-gradient(to left, var(--cyan-hsl), var(--blue));
 }
 @-webkit-keyframes hvr-push {
     50% {
@@ -584,6 +590,25 @@ input[type="email"] {
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+  }
+  @media (min-width:700px){
+        .cta>h2 {
+            font-size: 1.7rem;
+        }
+      .sign--up{
+          display:flex;
+          gap:1.5em;
+          padding:1em;
+      }
+      input[type=email]{
+          width:65%;
+          padding:.7em 0;
+          margin-bottom:0;
+      }
+      .cta--form--button{
+          width:40%;
+
+      }
   }
 footer {
     background-color: var(--dark-blue--3);
